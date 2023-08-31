@@ -1,0 +1,328 @@
+
+**** 05/10/22 23:34:28 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-iranpour-p1"  [ C:\Users\ZahraIranpour\Desktop\term 6\elec sanati\hw\shabih sazi\project1-SCHEMATIC1-iranpou
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "project1-SCHEMATIC1-iranpour-p1.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 75ms 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\project1-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING project1-SCHEMATIC1.net ****
+* source PROJECT1
+L_L2         N26997 N08549  1mH  
+L_L3         N27038 N08576  1mH  
+X_X1         N08549 N38532 N15750 2N5060
+I_I4         N37370 0 DC 0Adc AC 0Aac
++PULSE 0 200u 15m 0 0 6.66m 20m
+L_L4         N42168 N08844  1mH  
+X_X3         N08844 N37370 N15750 2N5060
+V_V11         N26997 0  
++SIN 0 311 50 0 0 0
+I_I3         N38532 0 DC 0Adc AC 0Aac
++PULSE 0 200u 1.66m 0.01m 0.01m 6.66m 20m
+X_X4         0 N38532 N08549 2N5060
+X_X2         N08576 N38358 N15750 2N5060
+X_X6         0 N37370 N08844 2N5060
+V_V12         N27038 0  
++SIN 0 311 50 0 0 120
+I_I1         N15750 0 DC 10Adc  
+V_V13         N42168 0  
++SIN 0 311 50 0 0 240
+I_I5         N38358 0 DC 0Adc AC 0Aac
++PULSE 0 200u 8.33m 0.01m 0.01m 6.66m 20m
+X_X5         0 N38358 N08576 2N5060
+
+**** RESUMING project1-SCHEMATIC1-iranpour-p1.sim.cir ****
+.END
+
+**** 05/10/22 23:34:28 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-iranpour-p1"  [ C:\Users\ZahraIranpour\Desktop\term 6\elec sanati\hw\shabih sazi\project1-SCHEMATIC1-iranpou
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.X1.Dgk     X_X1.X1.Dseries X_X1.X1.Delay   X_X1.X1.Dkarev  
+          IS  100.000000E-18   10.000000E-15    1.000000E-12  100.000000E-12 
+          RS    5                                .01             .01         
+         CJO   50.000000E-12                    5.000000E-12    5.000000E-12 
+
+
+               X_X1.X1.Dakfwd  X_X1.X1.Dbreak  X_X3.X1.Dgk     X_X3.X1.Dseries 
+          IS   40.000000E-12   10.000000E-15  100.000000E-18   10.000000E-15 
+          BV                   33                                            
+         IBV                  100.000000E-09                                 
+          RS                     .5             5                            
+         CJO    5.000000E-12    5.000000E-12   50.000000E-12                 
+
+
+               X_X3.X1.Delay   X_X3.X1.Dkarev  X_X3.X1.Dakfwd  X_X3.X1.Dbreak  
+          IS    1.000000E-12  100.000000E-12   40.000000E-12   10.000000E-15 
+          BV                                                   33            
+         IBV                                                  100.000000E-09 
+          RS     .01             .01                             .5          
+         CJO    5.000000E-12    5.000000E-12    5.000000E-12    5.000000E-12 
+
+
+               X_X4.X1.Dgk     X_X4.X1.Dseries X_X4.X1.Delay   X_X4.X1.Dkarev  
+          IS  100.000000E-18   10.000000E-15    1.000000E-12  100.000000E-12 
+          RS    5                                .01             .01         
+         CJO   50.000000E-12                    5.000000E-12    5.000000E-12 
+
+
+               X_X4.X1.Dakfwd  X_X4.X1.Dbreak  X_X2.X1.Dgk     X_X2.X1.Dseries 
+          IS   40.000000E-12   10.000000E-15  100.000000E-18   10.000000E-15 
+          BV                   33                                            
+         IBV                  100.000000E-09                                 
+          RS                     .5             5                            
+         CJO    5.000000E-12    5.000000E-12   50.000000E-12                 
+
+
+               X_X2.X1.Delay   X_X2.X1.Dkarev  X_X2.X1.Dakfwd  X_X2.X1.Dbreak  
+          IS    1.000000E-12  100.000000E-12   40.000000E-12   10.000000E-15 
+          BV                                                   33            
+         IBV                                                  100.000000E-09 
+          RS     .01             .01                             .5          
+         CJO    5.000000E-12    5.000000E-12    5.000000E-12    5.000000E-12 
+
+
+               X_X6.X1.Dgk     X_X6.X1.Dseries X_X6.X1.Delay   X_X6.X1.Dkarev  
+          IS  100.000000E-18   10.000000E-15    1.000000E-12  100.000000E-12 
+          RS    5                                .01             .01         
+         CJO   50.000000E-12                    5.000000E-12    5.000000E-12 
+
+
+               X_X6.X1.Dakfwd  X_X6.X1.Dbreak  X_X5.X1.Dgk     X_X5.X1.Dseries 
+          IS   40.000000E-12   10.000000E-15  100.000000E-18   10.000000E-15 
+          BV                   33                                            
+         IBV                  100.000000E-09                                 
+          RS                     .5             5                            
+         CJO    5.000000E-12    5.000000E-12   50.000000E-12                 
+
+
+               X_X5.X1.Delay   X_X5.X1.Dkarev  X_X5.X1.Dakfwd  X_X5.X1.Dbreak  
+          IS    1.000000E-12  100.000000E-12   40.000000E-12   10.000000E-15 
+          BV                                                   33            
+         IBV                                                  100.000000E-09 
+          RS     .01             .01                             .5          
+         CJO    5.000000E-12    5.000000E-12    5.000000E-12    5.000000E-12 
+
+
+**** 05/10/22 23:34:28 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-iranpour-p1"  [ C:\Users\ZahraIranpour\Desktop\term 6\elec sanati\hw\shabih sazi\project1-SCHEMATIC1-iranpou
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.X1.Vswitch X_X3.X1.Vswitch X_X4.X1.Vswitch X_X2.X1.Vswitch 
+         RON     .833333         .833333         .833333         .833333     
+        ROFF  105.882400E+03  105.882400E+03  105.882400E+03  105.882400E+03 
+         VON    5               5               5               5            
+        VOFF    1.5             1.5             1.5             1.5          
+
+
+               X_X6.X1.Vswitch X_X5.X1.Vswitch 
+         RON     .833333         .833333     
+        ROFF  105.882400E+03  105.882400E+03 
+         VON    5               5            
+        VOFF    1.5             1.5          
+
+
+**** 05/10/22 23:34:28 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-iranpour-p1"  [ C:\Users\ZahraIranpour\Desktop\term 6\elec sanati\hw\shabih sazi\project1-SCHEMATIC1-iranpou
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N08549)    0.0000 (N08576)  269.3300 (N08844) -269.3300 (N15750)  -35.9350     
+
+(N26997)    0.0000 (N27038)  269.3300 (N37370) -231.5400 (N38358)   13.2760     
+
+(N38532)  -29.5360 (N42168) -269.3300 (X_X1.X1.Itot)   42.2640                  
+
+(X_X1.X1.prod)   10.0000              (X_X2.X1.Itot)  365.4100                  
+
+(X_X2.X1.prod)   10.0000              (X_X3.X1.Itot)    0.0000                  
+
+(X_X3.X1.prod)    0.0000              (X_X4.X1.Itot)    0.0000                  
+
+(X_X4.X1.prod)    0.0000              (X_X5.X1.Itot)    0.0000                  
+
+(X_X5.X1.prod)    0.0000              (X_X6.X1.Itot)  322.2900                  
+
+(X_X6.X1.prod)   10.0000              (X_X1.X1.dlay1)   10.0000                 
+
+(X_X1.X1.dlay2)   10.0000             (X_X1.X1.dvdt0)   35.9350                 
+
+(X_X1.X1.dvdt1)  -35.9350             (X_X1.X1.dvdt2)  -35.9350                 
+
+(X_X1.X1.gate1)  -35.0740             (X_X1.X1.gate2)  -35.9350                 
+
+(X_X1.X1.gate4)   10.0000             (X_X2.X1.dlay1)   10.0000                 
+
+(X_X2.X1.dlay2)   10.0000             (X_X2.X1.dvdt0)  305.2700                 
+
+(X_X2.X1.dvdt1)  -35.9350             (X_X2.X1.dvdt2)  -35.9350                 
+
+(X_X2.X1.gate1)  -34.7350             (X_X2.X1.gate2)  -35.9350                 
+
+(X_X2.X1.gate4)   10.0000             (X_X3.X1.dlay1) 8.599E-21                 
+
+(X_X3.X1.dlay2)-9.446E-21             (X_X3.X1.dvdt0)    0.0000                 
+
+(X_X3.X1.dvdt1)  -35.9350             (X_X3.X1.dvdt2)  -35.9350                 
+
+(X_X3.X1.gate1) -194.8600             (X_X3.X1.gate2)  -35.9350                 
+
+(X_X3.X1.gate4)    0.0000             (X_X4.X1.dlay1)-14.85E-27                 
+
+(X_X4.X1.dlay2) 17.82E-27             (X_X4.X1.dvdt0)    0.0000                 
+
+(X_X4.X1.dvdt1)    0.0000             (X_X4.X1.dvdt2)    0.0000                 
+
+(X_X4.X1.gate1)  -23.9980             (X_X4.X1.gate2)    0.0000                 
+
+(X_X4.X1.gate4)    0.0000             (X_X5.X1.dlay1) 2.047E-21                 
+
+(X_X5.X1.dlay2)-2.248E-21             (X_X5.X1.dvdt0)    0.0000                 
+
+(X_X5.X1.dvdt1)  269.3300             (X_X5.X1.dvdt2)  269.3300                 
+
+(X_X5.X1.gate1)   61.2870             (X_X5.X1.gate2)  269.3300                 
+
+(X_X5.X1.gate4)    0.0000             (X_X6.X1.dlay1)   10.0000                 
+
+(X_X6.X1.dlay2)   10.0000             (X_X6.X1.dvdt0)  269.3300                 
+
+(X_X6.X1.dvdt1) -269.3300             (X_X6.X1.dvdt2) -269.3300                 
+
+(X_X6.X1.gate1) -268.2200             (X_X6.X1.gate2) -269.3300                 
+
+(X_X6.X1.gate4)   10.0000             (X_X1.X1.anode0)  -35.2180                
+
+(X_X1.X1.anode2)  -35.9350            (X_X1.X1.break1)    -.2115                
+
+(X_X1.X1.contot)   10.0000            (X_X2.X1.anode0)  -35.1630                
+
+(X_X2.X1.anode2)  -35.9350            (X_X2.X1.break1)  269.0700                
+
+(X_X2.X1.contot)   10.0000            (X_X3.X1.anode0)  -36.3720                
+
+(X_X3.X1.anode2)  -35.9350            (X_X3.X1.break1)  -36.9230                
+
+(X_X3.X1.contot)    0.0000            (X_X4.X1.anode0)    0.0000                
+
+(X_X4.X1.anode2)    0.0000            (X_X4.X1.break1)-123.5E-18                
+
+(X_X4.X1.contot)    0.0000            (X_X5.X1.anode0)  268.8900                
+
+(X_X5.X1.anode2)  269.3300            (X_X5.X1.break1)  268.3400                
+
+(X_X5.X1.contot)    0.0000            (X_X6.X1.anode0) -268.5700                
+
+(X_X6.X1.anode2) -269.3300            (X_X6.X1.break1)    -.2638                
+
+(X_X6.X1.contot)   10.0000            (X_X1.X1.condvdt)    0.0000               
+
+(X_X1.X1.congate)   10.0000           (X_X1.X1.conmain)   10.0000               
+
+(X_X1.X1.control)    9.9409           (X_X2.X1.condvdt)    0.0000               
+
+(X_X2.X1.congate)   10.0000           (X_X2.X1.conmain)   10.0000               
+
+(X_X2.X1.control)    9.9410           (X_X3.X1.condvdt)    0.0000               
+
+(X_X3.X1.congate)    0.0000           (X_X3.X1.conmain)    0.0000               
+
+(X_X3.X1.control)-2.618E-18           (X_X4.X1.condvdt)    0.0000               
+
+(X_X4.X1.congate)    0.0000           (X_X4.X1.conmain)    0.0000               
+
+(X_X4.X1.control)-1.674E-18           (X_X5.X1.condvdt)    0.0000               
+
+(X_X5.X1.congate)    0.0000           (X_X5.X1.conmain)    0.0000               
+
+(X_X5.X1.control) 1.437E-18           (X_X6.X1.condvdt)    0.0000               
+
+(X_X6.X1.congate)   10.0000           (X_X6.X1.conmain)   10.0000               
+
+(X_X6.X1.control)    9.9409           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V11       -4.227E+01
+    V_V12       -8.350E+02
+    V_V13        7.200E+02
+    X_X1.X1.VIak   4.226E+01
+    X_X1.X1.VdVdt   0.000E+00
+    X_X1.X1.VIgf   7.384E-03
+    X_X3.X1.VIak  -4.044E-11
+    X_X3.X1.VdVdt   0.000E+00
+    X_X3.X1.VIgf  -4.890E-02
+    X_X4.X1.VIak   0.000E+00
+    X_X4.X1.VdVdt   0.000E+00
+    X_X4.X1.VIgf  -7.384E-03
+    X_X2.X1.VIak   3.654E+02
+    X_X2.X1.VdVdt   0.000E+00
+    X_X2.X1.VIgf   6.401E-02
+    X_X6.X1.VIak   3.223E+02
+    X_X6.X1.VdVdt   0.000E+00
+    X_X6.X1.VIgf   4.890E-02
+    X_X5.X1.VIak  -4.044E-11
+    X_X5.X1.VdVdt   0.000E+00
+    X_X5.X1.VIgf  -6.401E-02
+
+    TOTAL POWER DISSIPATION   4.19E+05  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            1.22
+
